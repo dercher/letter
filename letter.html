@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title>CSS is Awesome !</title>
+		<link rel="stylesheet" href="css/letter.css">
+	</head>
+	<body>
+       <button class="prove">Prove</button>
+		<div class="container"> 
+		  <div class="back">
+		    <div class="back__inner">
+		    	<div class="paper">
+		    	<form class="formWrapper1">
+		    		<div class="paper__text"><div>Ваше сообщение:</div></div>
+		    		<textarea class="message" maxlength="1000" ROWS="5" placeholder="Введите здесь текс"></textarea>
+		    	</form>	    	  
+		    	</div>
+		    </div>
+		    <div class="back__right__inner"></div>	
+		    <div class="back__right"></div>	
+		    <div class="back__left__inner"></div>	    
+		    <div class="back__left"></div>
+		    <div class="back__bottom__inner"></div>
+		    <div class="back__bottom">
+		      <div class="formWrapper2">
+			      <div class="letter__text">Ваше имя:</div>
+		    	  <input type="text" name="">
+		    	  <div class="letter__text">Ваш E-mail/Skype:</div>
+		    	  <input type="text" name="">
+		    	  <button class="letter__button" onclick="submitLetter()">Отправить</button>
+		      </div>
+		    </div>
+		    <div class="back__top__inner"></div>
+		    <div class="back__top"></div>
+		  </div>
+		  <div class="front"></div>
+		</div>
+	   <div class="submited"> 
+	    <div>
+	       <p>Ваше сообщение успешно отправлено!</p>
+	       <p>В ближайшее время я с Вами свяжусь!</p>
+	      <button onclick="removeSub(0)">Ok</button>
+	    </div>   
+	  </div>
+	  <div class="submited"> 
+	    <div>
+	     <p>Заполните пожалуйста все поля для вводя</p>
+	     <button onclick="removeSub(1)">Ok</button>
+	   </div>   
+	  </div>
+	  <footer class="made">Made by Dercher</footer>
+		<script src="js/letter.js"></script>
+	</body>
+</html>
