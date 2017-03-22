@@ -1,5 +1,5 @@
 (function () {
- var timer = 1500, isOpen = false; 
+ var isOpen = false; 
  document.querySelector('.prove').onclick = function() {
  if(!isOpen) {
    isOpen = true;
@@ -13,7 +13,7 @@
            ];
    setTimeout(function() {
    animateZ(elems, false, true, 4, 200, [0, 1], false, false);
-  }, timer*0.6);
+  }, 900);
  }
 }
 //--------------------------------------------
@@ -27,7 +27,7 @@ function movePaper(elems) {
     paper.style.left = '0%';
     setTimeout(function() {
      animateZ(elems, true, false, 3, 0, [0, 3], true, false);
-    }, timer*0.2666)
+    }, 400)
   }, 20)
 }
 //---------------------------------------
@@ -78,20 +78,20 @@ if(close) elems = elems.reverse();
            setTimeout(function() {
             wrapper1.style.transform = 'scale(1)'; 
            	wrapper2.style.transform = 'scale(1)';
-           }, timer*0.233)
+           }, 350)
           
- 	 	}, timer*0.233)    
+ 	 	}, 350)    
  	  }
  	}
     count++;
-   }, timer*0.233);
+   }, 350);
 }
 //-----------------------
 document.querySelector('.letter__button').onclick = function(event) {
     event.preventDefault();
    document.querySelector('.paper').style.top = '0';
    setTimeout(function() {
-    animateZ([['.back__top', '.back__top__inner']], true, false, 1, timer*0.0665, [0, 1], false, true)
+    animateZ([['.back__top', '.back__top__inner']], true, false, 1, 100, [0, 1], false, true)
    }, 15)
    setTimeout(function() {
      document.querySelector('.front').style.transform = 'perspective(900px) rotateY(0deg)';
@@ -101,9 +101,9 @@ document.querySelector('.letter__button').onclick = function(event) {
         document.querySelector('.submited').style.display = 'block';
         setTimeout(function() {
         document.querySelector('.submited').style.transform = 'scale(1) rotate(360deg)';
-     }, timer)
-    }, timer*0.834)
-   }, timer*0.5)
+     }, 1500)
+    }, 1250)
+   }, 750)
 }
 //-----------------
 document.querySelectorAll('.ok')[0].onclick = function() {removeSub()}
@@ -113,7 +113,7 @@ function removeSub() {
 	el.style.opacity = '0';
 	setTimeout(function() {
     el.style.display = 'none';
-	}, timer)
+	}, 1500)
 }
 //--------------------------
 })();
